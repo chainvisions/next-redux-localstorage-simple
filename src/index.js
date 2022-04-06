@@ -122,7 +122,7 @@ function SafeLocalStorage (warnFn) {
 Object.defineProperty(SafeLocalStorage.prototype, 'length', {
   get: function length () {
     try {
-      if(typeof localStorage !== "undefined") {
+      if(typeof window !== "undefined") {
         return localStorage.length
       }
     } catch (err) {
@@ -136,7 +136,7 @@ Object.defineProperty(SafeLocalStorage.prototype, 'length', {
 
 SafeLocalStorage.prototype.key = function key (ind) {
   try {
-    if(typeof localStorage !== "undefined") {
+    if(typeof window !== "undefined") {
       return localStorage.key(ind)
     }
   } catch (err) {
@@ -147,7 +147,7 @@ SafeLocalStorage.prototype.key = function key (ind) {
 
 SafeLocalStorage.prototype.setItem = function setItem (key, val) {
   try {
-    if(typeof localStorage !== "undefined") {
+    if(typeof window !== "undefined") {
       localStorage.setItem(key, JSON.stringify(val))
     }
   } catch (err) {
@@ -157,7 +157,7 @@ SafeLocalStorage.prototype.setItem = function setItem (key, val) {
 
 SafeLocalStorage.prototype.getItem = function getItem (key) {
   try {
-    if(typeof localStorage !== "undefined") {
+    if(typeof window !== "undefined") {
       return JSON.parse(localStorage.getItem(key))
     }
   } catch (err) {
