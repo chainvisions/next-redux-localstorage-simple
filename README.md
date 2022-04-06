@@ -1,10 +1,12 @@
-# Redux-LocalStorage-Simple
+# Next-Redux-LocalStorage-Simple
 
-Save and load Redux state to and from LocalStorage.
+Save and load Redux state to and from LocalStorage. Next supported.
+
+This is a fork of redux-localstorage-simple with support for Next.js.
 
 ## Installation
 ```sh
-npm install --save redux-localstorage-simple
+npm install --save next-redux-localstorage-simple
 ```
 
 ## Usage Example (ES6 code)
